@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#101710">
+<title>Oxide Pixel</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#101710;color:#edf4e7;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{display:flex;justify-content:center;align-items:center;padding:18px;background:radial-gradient(ellipse at top,#263c27 0,#101710 58%)}
+main{width:min(100%,520px);border:1px solid #405640;background:rgba(13,20,13,.96);border-radius:22px;padding:24px 20px;box-shadow:0 18px 60px #0008}
+.logo{font-size:12px;letter-spacing:5px;color:#a6c99a;text-align:center;font-weight:800}
+h1{text-align:center;font-size:clamp(32px,9vw,52px);line-height:1;margin:14px 0 8px;letter-spacing:1px}
+.sub{text-align:center;color:#aab8a5;margin:0 0 24px;font-size:14px}
+.status{display:flex;gap:10px;align-items:center;background:#1b291b;border:1px solid #344a34;padding:12px 14px;border-radius:12px;margin:18px 0}
+.dot{width:9px;height:9px;background:#a8e66b;border-radius:50%;box-shadow:0 0 12px #a8e66b}
+.status span{font-size:13px;color:#dce9d5}
+button{width:100%;border:0;border-radius:13px;padding:17px 14px;font-weight:900;font-size:17px;letter-spacing:1px;background:#b4e879;color:#172312;cursor:pointer}
+button:active{transform:scale(.99)}
+.secondary{display:block;text-align:center;color:#aebca8;text-decoration:none;font-size:13px;margin-top:18px}
+.note{font-size:12px;color:#83927e;line-height:1.5;text-align:center;margin-top:18px}
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">SURVIVAL • PIXEL WORLD</div>
+  <h1>OXIDE PIXEL</h1>
+  <p class="sub">Собирай ресурсы. Стройся. Выживай.</p>
+  <div class="status"><i class="dot"></i><span>Игровое меню загружено</span></div>
+  <button id="play">ИГРАТЬ</button>
+  <a class="secondary" href="game.html" id="direct">Открыть игру напрямую</a>
+  <p class="note">Ежедневный мир может начинаться заново. Подключение к общему серверу настраивается отдельно.</p>
+</main>
+<script>
+document.getElementById('play').addEventListener('click', function(){ location.href = 'game.html'; });
+</script>
+</body>
+</html>
