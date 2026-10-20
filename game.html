@@ -82,6 +82,11 @@ const owned={axe:false,pick:false,rifle:false,spear:false,bow:false,ak:false,che
 const durability={axe:100,pick:100,rifle:100};
 const buildParts=[{id:'foundation',label:'Фундамент',icon:'▰',wood:8,stone:2},{id:'wall',label:'Задняя стена',icon:'▥',wood:6,stone:0},{id:'sidewall',label:'Боковая стена',icon:'┃',wood:6,stone:0},{id:'opening',label:'Проём',icon:'▤',wood:5,stone:0},{id:'door',label:'Дверь',icon:'▯',wood:5,stone:0},{id:'ceiling',label:'Потолок',icon:'▱',wood:7,stone:0},{id:'chest',label:'Мал. ящик',icon:'▧',wood:8,stone:0}];
 const worldWidth=5200,groundY=0;
+ const MP_URL = 'wss://oxide-pixel.onrender.com/ws';
+const MP_ID = 'p_' + Math.random().toString(36).slice(2);
+let mpSocket = null;
+let mpRemotes = new Map();
+let mpLastSend = 0;
 let previousDay=true, firstNightZombieCount=0, brokenToolSlot=null;
 const rand=(a,b)=>a+Math.random()*(b-a);
 function newRun(){
