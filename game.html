@@ -56,7 +56,7 @@ button:disabled{filter:grayscale(.7);cursor:not-allowed;box-shadow:inset 0 1px r
 <canvas id="game"></canvas>
 <div id="rotate"><div class="panel"><div class="phone"></div><h2>OXIDE PIXEL</h2><p>ПЕРЕВЕРНИ ТЕЛЕФОН</p><p>ИГРАЙ В ГОРИЗОНТАЛЬНОМ РЕЖИМЕ</p></div></div>
 <div id="hud">
- <div id="stats" class="panel">OXIDE PIXEL v1.14.5<br><span id="phase">ДЕНЬ</span> · <span id="time">00:00</span><br><span id="hpText">ЗДОРОВЬЕ 100/100</span><div id="healthOuter"><div id="health"></div></div><span id="weaponText">В руках: КАМЕНЬ</span></div>
+ <div id="stats" class="panel">OXIDE PIXEL v1.14.4<br><span id="phase">ДЕНЬ</span> · <span id="time">00:00</span><br><span id="hpText">ЗДОРОВЬЕ 100/100</span><div id="healthOuter"><div id="health"></div></div><span id="weaponText">В руках: КАМЕНЬ</span></div>
  <div id="resource" class="panel">Дерево: <span id="wood">0</span><br>Камень: <span id="stone">0</span><br>Сера: <span id="sulfur">0</span><br>Металл: <span id="metal">0</span><br>Патроны: <span id="ammo">30</span></div>
 </div>
 <div id="slots">
@@ -66,9 +66,9 @@ button:disabled{filter:grayscale(.7);cursor:not-allowed;box-shadow:inset 0 1px r
  <div class="controls"><button id="left">◀</button><button id="right">▶</button></div>
  <div class="controls"><button id="jump">ПРЫЖОК</button><button id="action">ДЕЙСТВИЕ</button></div>
 </div>
-<button id="inventoryBtn">ИНВЕНТАРЬ / КРАФТ</button><button id="quickInventoryBtn" style="display:none;position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:25">В ИНВЕНТАРЬ</button><button id="buildBtn" aria-label="Строительство">🧱</button><div id="buildHint"></div><div id="slotActions" style="display:none;position:fixed;top:48px;left:50%;transform:translateX(-50%);z-index:26;gap:5px;background:#182322;border:2px solid #aab4b6;padding:5px;border-radius:6px"><button id="slotToInventory" style="height:30px;font-size:10px">В ИНВЕНТАРЬ</button><button id="slotDrop" style="height:30px;font-size:10px">ВЫБРОСИТЬ</button></div><button id="craftAmmoBtn" style="position:fixed;top:110px;right:8px;z-index:4;height:36px;font-size:11px;padding:5px 9px">КРАФТ ПАТРОНОВ</button><div id="notice"></div>
-<div id="inventory"><div class="window"><h2>ИНВЕНТАРЬ И КРАФТ</h2><div class="items" id="inventoryItems"></div><div id="itemActions" style="display:none;gap:6px;margin:8px 0"><button id="moveToSlotBtn">ПЕРЕМЕСТИТЬ В СЛОТ</button><button id="dropItemBtn">ВЫБРОСИТЬ</button></div><h2>РЕЦЕПТЫ</h2><div class="recipes"><button data-craft="axe">СОЗДАТЬ ТОПОР<br>8 дерева + 3 камня</button><button data-craft="pick">СОЗДАТЬ КИРКУ<br>10 дерева + 6 камня</button><button data-craft="rifle">СОЗДАТЬ ВИНТОВКУ<br>20 дерева + 10 металла + 8 камня</button><button data-craft="ammo">СОЗДАТЬ 10 ПАТРОНОВ<br>2 металла + 2 серы</button><button data-craft="chest">МАЛЕНЬКИЙ ЯЩИК<br>8 дерева + 2 металла</button><button data-craft="spear">СОЗДАТЬ КОПЬЁ<br>12 дерева + 3 камня</button><button data-craft="bow">СОЗДАТЬ ЛУК<br>15 дерева + 10 ткани</button><button data-craft="arrow">СОЗДАТЬ 1 СТРЕЛУ<br>1 камень + 1 дерево</button><button data-craft="ak">🔫 КАЛАШНИКОВ<br>30 дерева + 15 металла + 8 камня</button><button data-craft="bandage">🩹 БАНДАЖ<br>5 ткани</button><button data-craft="woodArmor">🪵 ДЕРЕВЯННАЯ БРОНЯ<br>10 дерева · защита 2%</button><button data-craft="leatherHelmet">🪖 КОЖАНЫЙ ШЛЕМ<br>10 кожи</button><button data-craft="leatherChest">🦺 КОЖАНЫЙ НАГРУДНИК<br>25 кожи</button><button data-craft="leatherPants">👖 КОЖАНЫЕ ШТАНЫ<br>15 кожи</button><button data-craft="leatherBoots">🥾 КОЖАНЫЕ ПОНOЖИ<br>5 кожи</button><button data-craft="metalHelmet">🪖 МЕТАЛЛИЧЕСКИЙ ШЛЕМ<br>10 металла</button><button data-craft="metalChest">🦺 МЕТАЛЛИЧЕСКИЙ НАГРУДНИК<br>25 металла</button><button data-craft="metalPants">👖 МЕТАЛЛИЧЕСКИЕ ШТАНЫ<br>15 металла</button><button data-craft="metalBoots">🥾 МЕТАЛЛИЧЕСКИЕ ПОНOЖИ<br>5 металла</button></div><button class="close" id="closeInventory">ЗАКРЫТЬ</button></div></div>
-<div id="chestModal" style="display:none;position:fixed;inset:0;z-index:30;background:#000b;align-items:center;justify-content:center;padding:12px"><div style="width:min(600px,96vw);max-height:85vh;overflow:auto;background:#1c2223;border:3px solid #b3c3bd;padding:12px;border-radius:10px"><h2>СУНДУК</h2><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div><b>СУНДУК</b><div id="chestItems" class="items"></div></div><div><b>ТВОЙ ИНВЕНТАРЬ</b><div id="playerChestItems" class="items"></div></div></div><button id="closeChest" style="width:100%;height:40px">ЗАКРЫТЬ</button></div></div><div id="death"><div class="panel"><h2>ТЫ ПОГИБ</h2><p>После смерти ресурсы забега теряются. Каждый новый забег начинается с нуля.</p><p id="record"></p><button id="restart">НАЧАТЬ ЗАНОВО</button></div></div>
+<button id="inventoryBtn">ИНВЕНТАРЬ / КРАФТ</button><button id="buildBtn" aria-label="Строительство">🧱</button><div id="buildHint"></div><button id="craftAmmoBtn" style="position:fixed;top:110px;right:8px;z-index:4;height:36px;font-size:11px;padding:5px 9px">КРАФТ ПАТРОНОВ</button><div id="notice"></div>
+<div id="inventory"><div class="window"><h2>ИНВЕНТАРЬ И КРАФТ</h2><div class="items" id="inventoryItems"></div><h2>РЕЦЕПТЫ</h2><div class="recipes"><button data-craft="axe">СОЗДАТЬ ТОПОР<br>8 дерева + 3 камня</button><button data-craft="pick">СОЗДАТЬ КИРКУ<br>10 дерева + 6 камня</button><button data-craft="rifle">СОЗДАТЬ ВИНТОВКУ<br>20 дерева + 10 металла + 8 камня</button><button data-craft="ammo">СОЗДАТЬ 10 ПАТРОНОВ<br>2 металла + 2 серы</button><button data-craft="chest">МАЛЕНЬКИЙ ЯЩИК<br>8 дерева + 2 металла</button><button data-craft="spear">СОЗДАТЬ КОПЬЁ<br>12 дерева + 3 камня</button><button data-craft="bow">СОЗДАТЬ ЛУК<br>15 дерева + 10 ткани</button><button data-craft="arrow">СОЗДАТЬ 1 СТРЕЛУ<br>1 камень + 1 дерево</button><button data-craft="ak">🔫 КАЛАШНИКОВ<br>30 дерева + 15 металла + 8 камня</button><button data-craft="bandage">🩹 БАНДАЖ<br>5 ткани</button><button data-craft="woodArmor">🪵 ДЕРЕВЯННАЯ БРОНЯ<br>10 дерева · защита 2%</button><button data-craft="leatherHelmet">🪖 КОЖАНЫЙ ШЛЕМ<br>10 кожи</button><button data-craft="leatherChest">🦺 КОЖАНЫЙ НАГРУДНИК<br>25 кожи</button><button data-craft="leatherPants">👖 КОЖАНЫЕ ШТАНЫ<br>15 кожи</button><button data-craft="leatherBoots">🥾 КОЖАНЫЕ ПОНOЖИ<br>5 кожи</button><button data-craft="metalHelmet">🪖 МЕТАЛЛИЧЕСКИЙ ШЛЕМ<br>10 металла</button><button data-craft="metalChest">🦺 МЕТАЛЛИЧЕСКИЙ НАГРУДНИК<br>25 металла</button><button data-craft="metalPants">👖 МЕТАЛЛИЧЕСКИЕ ШТАНЫ<br>15 металла</button><button data-craft="metalBoots">🥾 МЕТАЛЛИЧЕСКИЕ ПОНOЖИ<br>5 металла</button></div><button class="close" id="closeInventory">ЗАКРЫТЬ</button></div></div>
+<div id="death"><div class="panel"><h2>ТЫ ПОГИБ</h2><p>После смерти ресурсы забега теряются. Каждый новый забег начинается с нуля.</p><p id="record"></p><button id="restart">НАЧАТЬ ЗАНОВО</button></div></div>
 <script>
 (()=>{
 const canvas=document.getElementById('game'),ctx=canvas.getContext('2d');
@@ -77,21 +77,97 @@ let W=innerWidth,H=innerHeight,dpr=1;
 function resize(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;canvas.width=Math.floor(W*dpr);canvas.height=Math.floor(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0)}
 addEventListener('resize',resize);resize();
 const ui={wood:document.getElementById('wood'),stone:document.getElementById('stone'),sulfur:document.getElementById('sulfur'),metal:document.getElementById('metal'),ammo:document.getElementById('ammo'),phase:document.getElementById('phase'),time:document.getElementById('time'),hpText:document.getElementById('hpText'),health:document.getElementById('health'),weaponText:document.getElementById('weaponText'),notice:document.getElementById('notice')};
-let selectedInventoryItem=null,activeChest=null;let keys={left:false,right:false,fire:false},player,objects,shots,particles,tool,worldX,elapsed,day,health,resources,dead,lastTime,animalTimer,zombieTimer,noticeTimer,recordTime=0,ammo=0,actionCooldown=0,buildMode=false,buildType='foundation',walkTime=0,arrows=0,armorType='none',armorPieces={helmet:0,chest:0,pants:0,boots:0};
+let keys={left:false,right:false,fire:false},player,objects,shots,particles,tool,worldX,elapsed,day,health,resources,dead,lastTime,animalTimer,zombieTimer,noticeTimer,recordTime=0,ammo=30,actionCooldown=0,buildMode=false,buildType='foundation',walkTime=0,arrows=0,armorType='none',armorPieces={helmet:0,chest:0,pants:0,boots:0};
 const owned={axe:false,pick:false,rifle:false,spear:false,bow:false,ak:false,chest:0};
 const durability={axe:100,pick:100,rifle:100};
 const buildParts=[{id:'foundation',label:'Фундамент',icon:'▰',wood:8,stone:2},{id:'wall',label:'Задняя стена',icon:'▥',wood:6,stone:0},{id:'sidewall',label:'Боковая стена',icon:'┃',wood:6,stone:0},{id:'opening',label:'Проём',icon:'▤',wood:5,stone:0},{id:'door',label:'Дверь',icon:'▯',wood:5,stone:0},{id:'ceiling',label:'Потолок',icon:'▱',wood:7,stone:0},{id:'chest',label:'Мал. ящик',icon:'▧',wood:8,stone:0}];
 const worldWidth=5200,groundY=0;
- const MP_URL = 'wss://oxide-pixel.onrender.com/ws';
-const MP_ID = 'p_' + Math.random().toString(36).slice(2);
-let mpSocket = null;
-let mpRemotes = new Map();
-let mpLastSend = 0;
+// Multiplayer: one authoritative world owner; other clients submit object changes.
+const MP_URL='wss://oxide-pixel.onrender.com/ws';
+const MP_ID='p_'+Math.random().toString(36).slice(2);
+let mpSocket=null,mpRemotes=new Map(),mpLastSend=0,mpLastWorldSend=0,mpReconnectTimer=null,mpConnected=false,mpApplyingWorld=false,mpWorldReady=false,mpIsWorldOwner=false,mpLastObjectJSON=[],mpLastWorldLength=0,mpLastPatchSend=0;
+function mpSend(data){if(mpSocket&&mpSocket.readyState===WebSocket.OPEN){try{mpSocket.send(JSON.stringify(data));}catch(e){}}}
+function mpApplyWorld(list){
+ if(!Array.isArray(list)||!list.length||mpApplyingWorld)return;
+ mpApplyingWorld=true;
+ try{objects=list.filter(o=>o&&typeof o==='object'&&typeof o.type==='string').map(o=>({...o}));mpWorldReady=true;mpRememberWorld();}
+ finally{mpApplyingWorld=false;}
+}
+function mpRememberWorld(){mpLastObjectJSON=Array.isArray(objects)?objects.map(o=>JSON.stringify(o)):[];mpLastWorldLength=mpLastObjectJSON.length;}
+function mpApplyPatch(changes,append){
+ if(!mpIsWorldOwner||!Array.isArray(objects)||!Array.isArray(changes))return;
+ for(const c of changes){if(!c||!Number.isInteger(c.i)||c.i<0||c.i>12000||!c.o||typeof c.o.type!=='string')continue;while(objects.length<=c.i)objects.push({type:'tree',x:0,y:0,alive:false,respawn:0});objects[c.i]={...c.o};}
+ if(Array.isArray(append))for(const o of append){if(o&&typeof o.type==='string'&&objects.length<12000)objects.push({...o});}
+ mpRememberWorld();mpSendWorld(performance.now(),true);
+}
+function mpConnect(){
+ try{
+  mpSocket=new WebSocket(MP_URL);
+  mpSocket.addEventListener('open',()=>{mpConnected=true;mpSend({type:'hello',id:MP_ID});showNotice('ОНЛАЙН: подключено');});
+  mpSocket.addEventListener('message',ev=>{
+   let msg;try{msg=JSON.parse(ev.data)}catch(e){return}
+   if(msg.type==='welcome'){
+    if(msg.id)window.__oxideMpServerId=msg.id;
+    mpIsWorldOwner=!!msg.worldOwner&&msg.worldOwner===msg.id;
+   }else if(msg.type==='snapshot'){
+    const states=msg.players||{};Object.keys(states).forEach(id=>{if(id!==window.__oxideMpServerId)mpRemotes.set(id,states[id]);});
+    mpIsWorldOwner=!!msg.worldOwner&&msg.worldOwner===window.__oxideMpServerId;
+    if(Array.isArray(msg.world)&&msg.world.length){mpApplyWorld(msg.world);}
+    else if(!mpWorldReady&&mpIsWorldOwner){mpWorldReady=true;mpRememberWorld();mpSendWorld(performance.now(),true);}
+   }else if(msg.type==='state'||msg.type==='player_state'){
+    if(msg.id&&msg.id!==window.__oxideMpServerId&&msg.state)mpRemotes.set(msg.id,msg.state);
+   }else if(msg.type==='world_snapshot'){
+    if(msg.id!==window.__oxideMpServerId&&Array.isArray(msg.world))mpApplyWorld(msg.world);
+   }else if(msg.type==='world_patch'){
+    if(mpIsWorldOwner&&msg.id!==window.__oxideMpServerId)mpApplyPatch(msg.changes,msg.append);
+   }else if(msg.type==='world_owner'){
+    mpIsWorldOwner=msg.id===window.__oxideMpServerId;
+    if(mpIsWorldOwner){mpWorldReady=true;mpRememberWorld();mpSendWorld(performance.now(),true);}
+   }else if(msg.type==='player_leave'){if(msg.id)mpRemotes.delete(msg.id);}
+  });
+  mpSocket.addEventListener('close',()=>{mpConnected=false;mpReconnectTimer=setTimeout(mpConnect,3000)});
+  mpSocket.addEventListener('error',()=>{mpConnected=false;});
+ }catch(e){mpConnected=false;mpReconnectTimer=setTimeout(mpConnect,3000)}
+}
+function mpPlayerState(){return {x:player.x,y:player.y,face:player.face||1,vx:player.vx||0,vy:player.vy||0,onGround:!!player.onGround,tool:tool||'stone',armorType:armorType||'none',armorPieces:armorPieces||{},attack:player.attack||0,attackKind:player.attackKind||'',walkTime:walkTime||0,dead:!!dead,health,resources:{...resources},ammo,arrows,bandages:typeof bandages==='number'?bandages:0,owned:{...owned},durability:{...durability}}}
+function mpSendState(now){if(!mpSocket||mpSocket.readyState!==WebSocket.OPEN||!player||now-mpLastSend<70)return;mpLastSend=now;mpSend({type:'state',state:mpPlayerState()});}
+function mpSendWorld(now,force=false){
+ if(!mpSocket||mpSocket.readyState!==WebSocket.OPEN||!Array.isArray(objects)||mpApplyingWorld||!mpIsWorldOwner||(!force&&now-mpLastWorldSend<900))return;
+ mpLastWorldSend=now;try{mpSend({type:'world_snapshot',world:objects});mpRememberWorld();}catch(e){}
+}
+function mpSendWorldPatch(now){
+ if(!mpSocket||mpSocket.readyState!==WebSocket.OPEN||!mpWorldReady||mpIsWorldOwner||!Array.isArray(objects)||mpApplyingWorld||now-mpLastPatchSend<180)return;
+ mpLastPatchSend=now;const changes=[],append=[];const limit=Math.min(objects.length,12000);
+ for(let i=0;i<limit;i++){const json=JSON.stringify(objects[i]);if(i>=mpLastWorldLength)append.push(objects[i]);else if(json!==mpLastObjectJSON[i])changes.push({i,o:objects[i]});}
+ if(changes.length||append.length){mpSend({type:'world_patch',changes,append});mpRememberWorld();}
+}
+function drawRemoteCharacter(r){
+ if(!r||!Number.isFinite(r.x))return;
+ const x=r.x-worldX,g=groundScreen(),y=Number(r.y)||0;
+ if(x<-70||x>W+70)return;
+ const face=(r.face||1)<0?-1:1,armor=r.armorPieces||{},t=r.tool||'stone';
+ ctx.save();ctx.translate(x,g+y);if(face<0)ctx.scale(-1,1);
+ const step=Math.abs(r.vx||0)>1?Math.sin((r.walkTime||elapsed)*12)*3:0;
+ ctx.fillStyle='#343b3d';ctx.fillRect(-9,-17+Math.max(0,-step),7,17-Math.max(0,-step));ctx.fillRect(2,-17+Math.max(0,step),7,17-Math.max(0,step));ctx.fillStyle='#1c2426';ctx.fillRect(-11,-4,10,5);ctx.fillRect(1,-4,11,5);
+ ctx.fillStyle='#c69a78';ctx.fillRect(-8,-34,16,17);ctx.fillRect(7,-31,7,14);ctx.fillRect(-8,-45,16,13);ctx.fillStyle='#292b2a';ctx.fillRect(2,-40,7,3);
+ if(r.armorType==='wood'){ctx.fillStyle='#85603c';ctx.fillRect(-11,-34,22,15);ctx.fillRect(-11,-34,22,3)}else{
+  if(armor.chest&&armor.chest!=='none'){ctx.fillStyle=armor.chest==='metal'?'#78878b':'#5b3b2b';ctx.fillRect(-11,-34,22,17)}
+  if(armor.helmet&&armor.helmet!=='none'){ctx.fillStyle=armor.helmet==='metal'?'#78878b':'#5b3b2b';ctx.fillRect(-9,-47,18,5);ctx.fillRect(-9,-47,3,8);ctx.fillRect(6,-47,3,8)}
+  if(armor.pants&&armor.pants!=='none'){ctx.fillStyle=armor.pants==='metal'?'#78878b':'#5b3b2b';ctx.fillRect(-9,-19,8,9);ctx.fillRect(2,-19,8,9)}
+  if(armor.boots&&armor.boots!=='none'){ctx.fillStyle=armor.boots==='metal'?'#78878b':'#5b3b2b';ctx.fillRect(-11,-4,10,5);ctx.fillRect(1,-4,11,5)}
+ }
+ if(t==='stone'){ctx.fillStyle='#777d7b';ctx.fillRect(10,-29,9,8);ctx.fillStyle='#aeb8b2';ctx.fillRect(12,-31,5,4)}
+ else if(t==='axe'||t==='pick'){ctx.fillStyle='#5d4631';ctx.fillRect(12,-32,3,24);ctx.fillStyle='#c4c9c3';ctx.fillRect(t==='axe'?8:5,-36,t==='axe'?12:19,6)}
+ else if(t==='rifle'||t==='ak'){ctx.fillStyle='#302e29';ctx.fillRect(9,-31,t==='ak'?52:46,5);ctx.fillStyle='#777b70';ctx.fillRect(17,-34,25,3)}
+ else if(t==='spear'){ctx.fillStyle='#68482c';ctx.fillRect(10,-29,51,4);ctx.fillStyle='#aeb8b2';ctx.fillRect(58,-31,8,8)}
+ if((r.attack||0)>0){ctx.strokeStyle='#f3e2a2';ctx.lineWidth=3;ctx.beginPath();ctx.arc(18,-29,25,-1.15,.65);ctx.stroke()}
+ ctx.restore();
+}
 let previousDay=true, firstNightZombieCount=0, brokenToolSlot=null;
 const rand=(a,b)=>a+Math.random()*(b-a);
 function newRun(){
  player={x:150,y:0,vx:0,vy:0,w:25,h:43,face:1,onGround:false,attack:0,attackKind:'stone',invuln:0};
- objects=[];shots=[];particles=[];worldX=0;worldWidth;elapsed=0;day=true;health=100;resources={wood:0,stone:0,sulfur:0,metal:0,cloth:0,leather:0,meat:0,fat:0};ammo=0;arrows=0;bandages=0;armorType='none';armorPieces={helmet:'none',chest:'none',pants:'none',boots:'none'};dead=false;lastTime=performance.now();animalTimer=12;zombieTimer=20;actionCooldown=0;tool='stone';previousDay=true;firstNightZombieCount=0;brokenToolSlot=null;owned.axe=false;owned.pick=false;owned.rifle=false;owned.spear=false;owned.bow=false;owned.ak=false;owned.chest=0;durability.axe=100;durability.pick=100;durability.rifle=100;buildMode=false;buildType='foundation';document.getElementById('buildBtn').classList.remove('active');document.getElementById('buildHint').style.display='none';
+ objects=[];shots=[];particles=[];worldX=0;worldWidth;elapsed=0;day=true;health=100;resources={wood:0,stone:0,sulfur:0,metal:0,cloth:0,leather:0,meat:0,fat:0};ammo=30;arrows=0;bandages=0;armorType='none';armorPieces={helmet:'none',chest:'none',pants:'none',boots:'none'};dead=false;lastTime=performance.now();animalTimer=12;zombieTimer=20;actionCooldown=0;tool='stone';previousDay=true;firstNightZombieCount=0;brokenToolSlot=null;owned.axe=false;owned.pick=false;owned.rifle=false;owned.spear=false;owned.bow=false;owned.ak=false;owned.chest=0;durability.axe=100;durability.pick=100;durability.rifle=100;buildMode=false;buildType='foundation';document.getElementById('buildBtn').classList.remove('active');document.getElementById('buildHint').style.display='none';
  for(let x=90;x<worldWidth;x+=rand(115,205)){
   const winter=x>worldWidth*.58;
   if(Math.random()<.68) objects.push({type:'tree',x,y:0,size:Math.random()<.35?'small':'large',winter,hp:Math.random()<.35?4:5,alive:true,respawn:0});
@@ -115,15 +191,10 @@ function updateUI(){
 function renderInventory(){
  const box=document.getElementById('inventoryItems');
  if(!box)return;
- const all=[['🪵','wood',resources.wood],['🪨','stone',resources.stone],['🟡','sulfur',resources.sulfur],['🔩','metal',resources.metal],['🔫','ammo',ammo],['🧵','cloth',resources.cloth],['🟫','leather',resources.leather],['🥩','meat',resources.meat],['🧴','fat',resources.fat],['🏹','arrows',arrows],['🩹','bandages',bandages],['🪓','axe',owned.axe?1:0],['⛏️','pick',owned.pick?1:0],['🔫','rifle',owned.rifle?1:0],['🗡️','spear',owned.spear?1:0],['🏹','bow',owned.bow?1:0],['🔫','ak',owned.ak?1:0],['📦','chest',owned.chest],['🪖','helmet',armorPieces.helmet!=='none'?1:0],['🦺','chestArmor',armorPieces.chest!=='none'?1:0],['👖','pants',armorPieces.pants!=='none'?1:0],['🥾','boots',armorPieces.boots!=='none'?1:0]];
- const present=all.filter(a=>Number(a[2])>0);box.innerHTML=present.map(([icon,id,count])=>`<div class="item" style="min-height:54px;color:white;pointer-events:none"><span style="font-size:22px">${icon}</span><br><b>${count}</b></div>`).join('')||'<div style="grid-column:1/-1;text-align:center;padding:14px">Инвентарь пуст</div>';
- selectedInventoryItem=null;document.getElementById('itemActions').style.display='none';
+ const labels=[['🪵 ДЕРЕВО',resources.wood],['🪨 КАМЕНЬ',resources.stone],['🟡 СЕРА',resources.sulfur],['🔩 МЕТАЛЛ',resources.metal],['🔫 ПАТРОНЫ',ammo],['КАМЕНЬ В РУКАХ','стартовый'],['ТОПОР',owned.axe?'есть':'не создан'],['КИРКА',owned.pick?'есть':'не создана'],['ВИНТОВКА',owned.rifle?'прочность '+Math.ceil(durability.rifle)+'%':'не создана'],['МАЛ. ЯЩИКИ',owned.chest],['🧵 ТКАНЬ',resources.cloth],['🟫 КОЖА',resources.leather],['🥩 МЯСО',resources.meat],['🧴 ЖИР',resources.fat],['🏹 СТРЕЛЫ',arrows],['🩹 БАНДАЖИ',bandages],['🪖 ШЛЕМ',armorPieces.helmet],['🦺 НАГРУДНИК',armorPieces.chest],['👖 ШТАНЫ',armorPieces.pants],['🥾 ПОНOЖИ',armorPieces.boots],['🔫 КАЛАШ',owned.ak?'есть':'не создан'],['БРОНЯ',armorType],['КОПЬЁ',owned.spear?'есть':'не создано'],['ЛУК',owned.bow?'есть':'не создан']];
+ box.innerHTML=labels.map(([n,v])=>`<div class="item">${n}<br><b>${v}</b></div>`).join('');
  document.querySelectorAll('[data-craft]').forEach(b=>{const k=b.dataset.craft;b.disabled=(k!=='ammo'&&k!=='chest'&&owned[k])||(k==='axe'&&(resources.wood<8||resources.stone<3))||(k==='pick'&&(resources.wood<10||resources.stone<6))||(k==='rifle'&&(resources.wood<20||resources.metal<10||resources.stone<8))||(k==='ammo'&&(resources.metal<2||resources.sulfur<2))||(k==='chest'&&(resources.wood<8||resources.metal<2))||(k==='spear'&&(owned.spear||resources.wood<12||resources.stone<3))||(k==='bow'&&(owned.bow||resources.wood<15||resources.cloth<10))||(k==='arrow'&&(resources.wood<1||resources.stone<1))||(k==='woodArmor'&&(armorType==='wood'||resources.wood<10))||(k==='leatherArmor'&&(armorType==='leather'||resources.leather<55))||(k==='metalArmor'&&(armorType==='metal'||resources.metal<55))||(k==='ak'&&(owned.ak||resources.wood<30||resources.metal<15||resources.stone<8))||(k==='bandage'&&resources.cloth<5)||(['leatherHelmet','leatherChest','leatherPants','leatherBoots'].includes(k)&&resources.leather<({leatherHelmet:10,leatherChest:25,leatherPants:15,leatherBoots:5}[k]))||(['metalHelmet','metalChest','metalPants','metalBoots'].includes(k)&&resources.metal<({metalHelmet:10,metalChest:25,metalPants:15,metalBoots:5}[k]));b.style.opacity=b.disabled?'.5':'1'});
 }
-function selectInventoryItem(id){selectedInventoryItem=id;document.getElementById('itemActions').style.display='flex';document.getElementById('quickInventoryBtn').style.display='block';}
-function moveSelectedToSlot(){const id=selectedInventoryItem;if(!id)return;if(['axe','pick','rifle','spear','bow','ak'].includes(id)&&owned[id]){tool=id;buildMode=false;document.getElementById('buildBtn').classList.remove('active');showNotice('Предмет выбран');updateUI();}else showNotice('Этот предмет нельзя экипировать');}
-function dropSelectedItem(){const id=selectedInventoryItem;if(!id)return;if(['wood','stone','sulfur','metal','cloth','leather','meat','fat'].includes(id)){if(resources[id]>0)resources[id]--;}else if(id==='ammo'&&ammo>0)ammo--;else if(id==='arrows'&&arrows>0)arrows--;else if(id==='bandages'&&bandages>0)bandages--;else if(['axe','pick','rifle','spear','bow','ak'].includes(id)&&owned[id]){owned[id]=false;if(tool===id)tool='stone';}else if(id==='chest'&&owned.chest>0)owned.chest--;else if(['helmet','chestArmor','pants','boots'].includes(id)){const k=id==='chestArmor'?'chest':id;armorPieces[k]='none';}else{showNotice('Нечего выбрасывать');return;}selectedInventoryItem=null;document.getElementById('itemActions').style.display='none';updateUI();renderInventory();showNotice('Выброшено');}
-function openChestUI(chest){activeChest=chest;document.getElementById('quickInventoryBtn').style.display='block';if(!chest.store)chest.store={wood:0,stone:0,sulfur:0,metal:0,cloth:0,leather:0,meat:0,fat:0};const draw=(id,store,isChest)=>{const el=document.getElementById(id);el.innerHTML=Object.entries(store).filter(([k,v])=>v>0).map(([k,v])=>`<button class="item" data-chest-item="${k}">${({wood:'🪵',stone:'🪨',sulfur:'🟡',metal:'🔩',cloth:'🧵',leather:'🟫',meat:'🥩',fat:'🧴'}[k]||'📦')}<br>${v}</button>`).join('')||'<div>Пусто</div>';el.querySelectorAll('[data-chest-item]').forEach(b=>b.onclick=()=>{const k=b.dataset.chestItem;if(isChest&&activeChest.store[k]>0){activeChest.store[k]--;resources[k]++;}else if(!isChest&&resources[k]>0){resources[k]--;activeChest.store[k]=(activeChest.store[k]||0)+1;}updateUI();openChestUI(activeChest);});};draw('chestItems',chest.store,true);draw('playerChestItems',resources,false);document.getElementById('chestModal').style.display='flex';}
 function craftItem(kind){
  if(dead)return;
  if(kind==='axe'){
@@ -153,13 +224,13 @@ function craftItem(kind){
  }else if(kind==='chest'){if(resources.wood<8||resources.metal<2){showNotice('Нужно 8 дерева и 2 металла');return}resources.wood-=8;resources.metal-=2;owned.chest++;showNotice('Создан маленький ящик. Открой 🧱 и выбери его');}
  updateUI();renderInventory();
 }
-function groundScreen(){return H*.75}
+function groundScreen(){return H*.78}
 function worldGround(){return groundScreen()}
 function screenX(x){return x-worldX}
 function hitAction(){
  if(dead||actionCooldown>0)return;
  if(buildMode){placeBuilding();return;}
- const chest=objects.find(o=>o.type==='build'&&o.part==='chest'&&Math.abs(o.x-player.x)<58&&o.alive);if(chest){openChestUI(chest);return;}
+ const chest=objects.find(o=>o.type==='build'&&o.part==='chest'&&Math.abs(o.x-player.x)<58&&o.alive);if(chest){if(!chest.store)chest.store={wood:0,stone:0,sulfur:0,metal:0};const total=resources.wood+resources.stone+resources.sulfur+resources.metal;if(total>0){for(const k in resources){chest.store[k]+=resources[k];resources[k]=0}showNotice('Ящик: ресурсы сложены')}else{for(const k in resources){resources[k]=chest.store[k]||0;chest.store[k]=0}showNotice('Ресурсы забраны из ящика')}updateUI();return;}
  const cooldown=(tool==='rifle'?1.6:tool==='ak'?0.12:tool==='spear'?1.5:(tool==='axe'||tool==='pick'?1.2:0.45));
  actionCooldown=cooldown;player.attack=cooldown*.55;player.attackKind=tool;
  if(tool==='bow'){if(!owned.bow||arrows<=0){actionCooldown=0;showNotice('Нужен лук и стрелы');return}arrows--;shots.push({x:player.x+player.face*28,y:groundScreen()+player.y-30,vx:player.face*470,life:1.3,damage:160});showNotice('ВЫСТРЕЛ');updateUI();return;}
@@ -329,6 +400,7 @@ function draw(){
  for(const o of objects){const x=screenX(o.x);if(x<-90||x>W+90)continue;if(o.type==='tree'&&o.alive)drawTree(o,x,g);else if(o.type==='ore'&&o.alive)drawOre(o,x,g);else if(o.type==='build'&&o.alive&&o.part!=='wall')drawBuilding(o,x,g);else if((o.type==='zombie'||o.type==='animal')&&o.alive){ctx.save();if(o.face<0){ctx.translate(x*2,0);ctx.scale(-1,1)}const bob=Math.sin(elapsed*8+(o.x%7))*1.5;ctx.translate(0,bob);drawEnemy(o,x,g);ctx.restore();}}
  for(const s of shots){const x=s.x-worldX;ctx.fillStyle='#ffe7a0';ctx.fillRect(x-3,s.y,10,3);ctx.fillStyle='#fff';ctx.fillRect(x+4,s.y-1,3,5)}
  drawCharacter();
+ for(const r of mpRemotes.values())drawRemoteCharacter(r);
  // night tint
  if(night){ctx.fillStyle='rgba(7,12,30,.28)';ctx.fillRect(0,0,W,H)}
  for(const p of particles){ctx.fillStyle=p.kind==='muzzle'?'#fff3b0':'#fff2a6';ctx.font=p.kind==='muzzle'?'bold 20px monospace':p.kind==='loot'?'bold 13px monospace':'14px monospace';ctx.fillStyle=p.kind==='loot'?'#f5e6b2':p.kind==='muzzle'?'#fff3b0':'#fff2a6';ctx.fillText(p.n,p.x-worldX,p.y-p.life*20)}
@@ -347,7 +419,7 @@ function update(dt){
  for(const o of objects){
   if(!o.alive&&o.respawn>0){o.respawn-=dt;if(o.respawn<=0&&o.type!=='zombie'&&o.type!=='animal'){const nearHouse=objects.some(b=>b.type==='build'&&b.alive&&Math.abs(b.x-o.x)<82);if(!nearHouse){o.alive=true;o.hp=o.type==='tree'?(o.size==='small'?4:5):4}else{o.respawn=0}}}
   if(!o.alive)continue;
-  if(o.type==='zombie'||o.type==='animal'){
+  if((o.type==='zombie'||o.type==='animal')&&mpIsWorldOwner){
    const dx=player.x-o.x,dist=Math.abs(dx);
    // Zombies only pursue while nearby; if the player escapes far away, they disappear.
    if(o.type==='zombie'&&dist>520){o.alive=false;continue;}
@@ -371,10 +443,10 @@ function update(dt){
   if(day){for(const o of objects){if(o.type==='zombie')o.alive=false;} firstNightZombieCount=0;}
   previousDay=day;
  }
- if(elapsed>=55){
+ if(mpIsWorldOwner&&elapsed>=55){
   if(day){animalTimer-=dt;if(animalTimer<=0){const aliveAnimals=objects.filter(o=>o.type==='animal'&&o.alive).length;if(aliveAnimals<3)spawnEnemy('animal');animalTimer=rand(12,20)}}
  }
- if(elapsed>=55&&!day){
+ if(mpIsWorldOwner&&elapsed>=55&&!day){
   zombieTimer-=dt;
   const aliveZombies=objects.filter(o=>o.type==='zombie'&&o.alive).length;
   if(zombieTimer<=0&&aliveZombies<2&&firstNightZombieCount<2){spawnEnemy('zombie');firstNightZombieCount++;zombieTimer=rand(22,30);}
@@ -384,19 +456,16 @@ function update(dt){
  updateUI();
 }
 let last=performance.now();
-function loop(now){const dt=Math.min(.035,(now-last)/1000||0);last=now;update(dt);draw();requestAnimationFrame(loop)}
+function loop(now){const dt=Math.min(.035,(now-last)/1000||0);last=now;update(dt);mpSendState(now);mpSendWorld(now);mpSendWorldPatch(now);draw();requestAnimationFrame(loop)}
 function bindHold(id,key){const el=document.getElementById(id);const down=e=>{e.preventDefault();keys[key]=true},up=e=>{e.preventDefault();keys[key]=false};el.addEventListener('pointerdown',down);['pointerup','pointercancel','pointerleave'].forEach(ev=>el.addEventListener(ev,up))}
 bindHold('left','left');bindHold('right','right');
 document.getElementById('jump').addEventListener('pointerdown',e=>{e.preventDefault();if(!dead&&player.onGround){player.vy=-320;player.onGround=false}});
 const actionBtn=document.getElementById('action');actionBtn.addEventListener('pointerdown',e=>{e.preventDefault();if(tool==='ak'){keys.fire=true;hitAction()}else if(bandages>0&&health<100){const heal=[14,15,15,15,16,16,17,18,19,20][Math.floor(Math.random()*10)];bandages--;health=Math.min(100,health+heal);showNotice('+'+heal+' HP · БАНДАЖ');updateUI();renderInventory()}else hitAction()});['pointerup','pointercancel','pointerleave'].forEach(ev=>actionBtn.addEventListener(ev,()=>keys.fire=false));
-document.querySelectorAll('.slot').forEach((s,i)=>s.addEventListener('pointerdown',e=>{e.preventDefault();if(buildMode){buildType=buildParts[i].id;updateUI();showNotice('Выбрано: '+buildParts[i].label);return;}const k=s.dataset.tool;if(!owned[k]||(durability[k]!==undefined&&durability[k]<=0))return; if(tool===k){tool='stone'}else{tool=k}window.slotActionTool=k;document.getElementById('slotActions').style.display='flex';updateUI()}));
-document.getElementById('slotToInventory').addEventListener('click',()=>{const k=window.slotActionTool;if(k&&owned[k]){if(tool===k)tool='stone';showNotice('Предмет убран в инвентарь');document.getElementById('slotActions').style.display='none';updateUI();renderInventory();}});
-document.getElementById('slotDrop').addEventListener('click',()=>{const k=window.slotActionTool;if(k&&owned[k]){owned[k]=false;if(tool===k)tool='stone';document.getElementById('slotActions').style.display='none';showNotice('Предмет выброшен');updateUI();renderInventory();}});
+document.querySelectorAll('.slot').forEach((s,i)=>s.addEventListener('pointerdown',e=>{e.preventDefault();if(buildMode){buildType=buildParts[i].id;updateUI();showNotice('Выбрано: '+buildParts[i].label);return;}const k=s.dataset.tool;if(!owned[k]||(durability[k]!==undefined&&durability[k]<=0))return; if(tool===k){tool='stone'}else{tool=k}updateUI()}));
 document.getElementById('buildBtn').addEventListener('click',()=>{buildMode=!buildMode;document.getElementById('buildBtn').classList.toggle('active',buildMode);const hint=document.getElementById('buildHint');hint.style.display=buildMode?'block':'none';hint.textContent=buildMode?'ВЫБЕРИ БЛОК → ДЕЙСТВИЕ: поставить':'РЕЖИМ СТРОЙКИ';updateUI();showNotice(buildMode?'Режим строительства':'Режим инструментов');});
 addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='a')keys.left=true;if(e.key==='ArrowRight'||e.key==='d')keys.right=true;if(e.key===' '&&player.onGround){player.vy=-320;player.onGround=false}if(e.key==='1'&&owned.axe&&durability.axe>0)tool=tool==='axe'?'stone':'axe';if(e.key==='2'&&owned.pick&&durability.pick>0)tool=tool==='pick'?'stone':'pick';if(e.key==='3'&&owned.rifle&&durability.rifle>0)tool=tool==='rifle'?'stone':'rifle';if(e.key==='4'&&owned.spear)tool=tool==='spear'?'stone':'spear';if(e.key==='5'&&owned.ak)tool=tool==='ak'?'stone':'ak';if(e.key==='e'||e.key==='Enter'){if(tool==='ak')keys.fire=true;else hitAction();}if(e.key==='Escape')document.getElementById('inventory').style.display='none';updateUI()});
 addEventListener('keyup',e=>{if(e.key==='e'||e.key==='Enter')keys.fire=false;if(e.key==='ArrowLeft'||e.key==='a')keys.left=false;if(e.key==='ArrowRight'||e.key==='d')keys.right=false});
 document.getElementById('restart').addEventListener('click',newRun);
-document.getElementById('moveToSlotBtn').addEventListener('click',moveSelectedToSlot);document.getElementById('dropItemBtn').addEventListener('click',dropSelectedItem);document.getElementById('quickInventoryBtn').addEventListener('click',()=>{document.getElementById('chestModal').style.display='none';document.getElementById('inventory').style.display='flex';document.getElementById('quickInventoryBtn').style.display='none';});document.getElementById('closeChest').addEventListener('click',()=>{document.getElementById('chestModal').style.display='none';activeChest=null;});
 document.getElementById('inventoryBtn').addEventListener('click',()=>{renderInventory();document.getElementById('inventory').style.display='flex'});
 const inventoryOverlay=document.getElementById('inventory');
 const closeInventory=()=>{inventoryOverlay.style.display='none'};
@@ -407,7 +476,7 @@ inventoryOverlay.addEventListener('pointerdown',e=>{if(e.target===inventoryOverl
 document.querySelectorAll('[data-craft]').forEach(b=>b.addEventListener('click',()=>craftItem(b.dataset.craft)));
 
 document.getElementById('craftAmmoBtn').addEventListener('click',()=>craftItem('ammo'));
-newRun();requestAnimationFrame(loop);
+newRun();mpConnect();requestAnimationFrame(loop);
 })();
 </script>
 </body>
